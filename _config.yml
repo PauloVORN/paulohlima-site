@@ -1,0 +1,36 @@
+title: Paulo H Lima
+tagline: Fotógrafo de moda no Rio de Janeiro
+description: >-
+  Fotografia de moda, campanha, lookbook e fashion film no Rio de Janeiro.
+  O Rio como coautor de cada imagem.
+
+# TEMPORÁRIO — URL de teste até a virada de DNS. Trocar pra
+# "https://paulohlima.com.br" / baseurl "" quando formos ao ar.
+url: "https://paulovorn.github.io"
+baseurl: "/paulohlima-site"
+
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+# Contato e redes
+whatsapp: "5521972886431"
+whatsapp_display: "(21) 97288-6431"
+email: "contato@paulohlima.com.br"
+instagram: "https://instagram.com/paulohlima"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts

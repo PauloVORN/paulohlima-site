@@ -1,0 +1,37 @@
+---
+title: Paulo H Lima — Fotógrafo de Moda no Rio de Janeiro
+permalink: /
+---
+
+<!-- CAPA — tratada como capa de revista: masthead + chamadas de capa como
+     navegação, uma foto forte, uma manchete. Ver assets/css/main.css. -->
+<nav class="masthead">
+  <a class="masthead-name" href="{{ '/' | relative_url }}">Paulo H Lima</a>
+  <div class="coverlines">
+    <a href="#editorial">Editorial</a>
+    <a href="#campanha">Campanha</a>
+    <a href="#lookbook">Lookbook</a>
+    <a href="#fashion-kids">Fashion Kids</a>
+    <a href="#fashion-film">Fashion Film</a>
+    <a href="#zinzane">Zinzane</a>
+  </div>
+</nav>
+
+<section class="capa">
+  <div class="capa-bg">
+    <picture>
+      <source srcset="{{ '/assets/img/hero/capa-pao-de-acucar.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/hero/capa-pao-de-acucar.jpg' | relative_url }}"
+           alt="Campanha de moda no Rio de Janeiro, Pão de Açúcar ao fundo — fotografia Paulo H Lima"
+           fetchpriority="high">
+    </picture>
+  </div>
+  <div class="capa-content">
+    <p class="capa-eyebrow">Rio de Janeiro · Moda · Fashion Film</p>
+    <h1 class="capa-headline">A cidade não é cenário.<br><em>É coautora.</em></h1>
+  </div>
+  <div class="capa-scroll">
+    <div class="capa-scroll-line"></div>
+    <span>Rolar</span>
+  </div>
+</section>
