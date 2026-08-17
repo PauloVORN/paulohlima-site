@@ -5,15 +5,7 @@ permalink: /
 
 <!-- CAPA — tratada como capa de revista: masthead + chamadas de capa como
      navegação, uma foto forte, uma manchete. Ver assets/css/main.css. -->
-<nav class="masthead">
-  <a class="masthead-name" href="{{ '/' | relative_url }}">Paulo H Lima</a>
-  <div class="coverlines">
-    <a href="#editorial">Editorial</a>
-    <a href="#campanha">Campanha</a>
-    <a href="#lookbook">Lookbook</a>
-    <a href="#fashion-film">Fashion Film</a>
-  </div>
-</nav>
+{% include masthead.html %}
 
 <section class="capa">
   <div class="capa-bg">
@@ -34,13 +26,12 @@ permalink: /
   </div>
 </section>
 
-<!-- ÍNDICE — bloco de transição no espírito de sumário de revista: cada
-     categoria como uma entrada numerada, com espaço reservado pra foto
-     (placeholder até as imagens definitivas entrarem). -->
+<!-- ÍNDICE — navegação real (cada entrada leva pra uma página própria),
+     no espírito de sumário de revista. -->
 <section class="indice">
   <p class="indice-label">Índice</p>
   <div class="indice-list">
-    <a id="editorial" class="indice-item" href="#editorial">
+    <a class="indice-item" href="{{ '/editorial/' | relative_url }}">
       <span class="indice-num">01</span>
       <span class="indice-title-group">
         <span class="indice-title">Editorial</span>
@@ -48,7 +39,7 @@ permalink: /
       </span>
       <span class="indice-thumb">Foto em breve</span>
     </a>
-    <a id="campanha" class="indice-item" href="#campanha">
+    <a class="indice-item" href="{{ '/campanha/' | relative_url }}">
       <span class="indice-num">02</span>
       <span class="indice-title-group">
         <span class="indice-title">Campanha</span>
@@ -56,7 +47,7 @@ permalink: /
       </span>
       <span class="indice-thumb">Foto em breve</span>
     </a>
-    <a id="lookbook" class="indice-item" href="#lookbook">
+    <a class="indice-item" href="{{ '/lookbook/' | relative_url }}">
       <span class="indice-num">03</span>
       <span class="indice-title-group">
         <span class="indice-title">Lookbook</span>
@@ -64,7 +55,7 @@ permalink: /
       </span>
       <span class="indice-thumb">Foto em breve</span>
     </a>
-    <a id="fashion-film" class="indice-item" href="#fashion-film">
+    <a class="indice-item" href="{{ '/fashion-film/' | relative_url }}">
       <span class="indice-num">04</span>
       <span class="indice-title-group">
         <span class="indice-title">Fashion Film</span>
