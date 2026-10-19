@@ -9,6 +9,10 @@ description: >-
 url: "https://paulovorn.github.io"
 baseurl: "/paulohlima-site"
 
+# TEMPORÁRIO — enquanto o site está em endereço de teste, pede aos buscadores para não indexar.
+# Remover (ou colocar false) na virada para paulohlima.com.br.
+noindex: true
+
 lang: pt-BR
 timezone: America/Sao_Paulo
 
@@ -16,7 +20,7 @@ timezone: America/Sao_Paulo
 whatsapp: "5521972886431"
 whatsapp_display: "(21) 97288-6431"
 email: "contato@paulohlima.com.br"
-instagram: "https://instagram.com/paulohlima"
+instagram: "https://instagram.com/paulohlimaoficial"
 
 plugins:
   - jekyll-seo-tag
