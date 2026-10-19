@@ -27,6 +27,7 @@ defaults:
       path: ""
     values:
       layout: default
+      image: /assets/img/og/og-paulohlima.jpg
 
 exclude:
   - README.md

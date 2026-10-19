@@ -1,0 +1,59 @@
+---
+title: Contato e orçamento
+description: "Peça um orçamento de fotografia de moda no Rio de Janeiro. Conte a marca, a data e o projeto e a conversa segue pelo WhatsApp."
+permalink: /contato/
+---
+
+{% include masthead.html mode="interior" %}
+
+<section class="edicao edicao--top contato">
+  <div class="edicao-header">
+    <h1 class="edicao-title">Contato</h1>
+  </div>
+
+  <div class="contato-grid">
+    <div class="contato-texto">
+      <p class="contato-lead">Conte um pouco do projeto: a marca, a data e o que você imagina. A conversa segue pelo WhatsApp.</p>
+      <ul class="contato-lista">
+        <li><a href="https://wa.me/{{ site.whatsapp }}" rel="noopener"><span class="contato-rot">WhatsApp</span>{{ site.whatsapp_display }}</a></li>
+        <li><a href="mailto:{{ site.email }}"><span class="contato-rot">E-mail</span>{{ site.email }}</a></li>
+        <li><a href="{{ site.instagram }}" rel="noopener"><span class="contato-rot">Instagram</span>@paulohlima</a></li>
+      </ul>
+    </div>
+
+    <form class="briefing" id="briefing" data-wa="{{ site.whatsapp }}" data-mail="{{ site.email }}">
+      <div class="campo">
+        <label for="f-nome">Seu nome</label>
+        <input id="f-nome" name="nome" type="text" autocomplete="name">
+      </div>
+      <div class="campo">
+        <label for="f-marca">Marca ou empresa</label>
+        <input id="f-marca" name="marca" type="text" autocomplete="organization">
+      </div>
+      <div class="campo">
+        <label for="f-tipo">Tipo de trabalho</label>
+        <select id="f-tipo" name="tipo">
+          <option value="">Escolha</option>
+          <option>Editorial</option>
+          <option>Campanha</option>
+          <option>Lookbook</option>
+          <option>Fashion Film</option>
+          <option>Ainda não sei</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-data">Data ou período</label>
+        <input id="f-data" name="data" type="text" placeholder="Ex.: março, ou uma data específica">
+      </div>
+      <div class="campo campo--cheio">
+        <label for="f-projeto">Sobre o projeto</label>
+        <textarea id="f-projeto" name="projeto" rows="4" placeholder="Referências, ideia, onde será usado…"></textarea>
+      </div>
+      <div class="briefing-acoes">
+        <button class="btn-wa" type="submit">Enviar pelo WhatsApp</button>
+        <button class="btn-mail" type="button" id="briefing-mail">Prefiro e-mail</button>
+      </div>
+      <p class="briefing-nota">Ao tocar em enviar, o WhatsApp abre com a mensagem pronta. Nada é gravado neste site.</p>
+    </form>
+  </div>
+</section>

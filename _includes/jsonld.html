@@ -1,0 +1,34 @@
+{%- assign base = site.url | append: site.baseurl -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ base | append: '/#paulo' | jsonify }},
+      "name": "Paulo H Lima",
+      "jobTitle": "Fotógrafo de moda",
+      "url": {{ base | append: '/' | jsonify }},
+      "image": {{ base | append: '/assets/img/og/og-paulohlima.jpg' | jsonify }},
+      "email": {{ site.email | jsonify }},
+      "telephone": "+{{ site.whatsapp }}",
+      "sameAs": [{{ site.instagram | jsonify }}],
+      "knowsAbout": ["Fotografia de moda", "Fotografia de campanha", "Lookbook", "Fashion film"],
+      "workLocation": { "@type": "Place", "name": "Rio de Janeiro, RJ, Brasil" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": {{ base | append: '/#servico' | jsonify }},
+      "name": "Paulo H Lima — Fotografia de moda",
+      "description": {{ site.description | strip | jsonify }},
+      "url": {{ base | append: '/' | jsonify }},
+      "image": {{ base | append: '/assets/img/og/og-paulohlima.jpg' | jsonify }},
+      "email": {{ site.email | jsonify }},
+      "telephone": "+{{ site.whatsapp }}",
+      "areaServed": { "@type": "City", "name": "Rio de Janeiro" },
+      "founder": { "@id": {{ base | append: '/#paulo' | jsonify }} },
+      "sameAs": [{{ site.instagram | jsonify }}]
+    }
+  ]
+}
+</script>

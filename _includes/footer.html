@@ -1,0 +1,16 @@
+<!-- Rodapé com contatos: toda página termina com um caminho claro até o orçamento. -->
+<footer class="rodape">
+  <div class="rodape-in">
+    <div class="rodape-id">
+      <p class="rodape-nome">Paulo H Lima</p>
+      <p class="rodape-sub">Fotografia de moda no Rio de Janeiro</p>
+    </div>
+    <nav class="rodape-links" aria-label="Contato">
+      <a href="https://wa.me/{{ site.whatsapp }}?text={{ 'Olá, Paulo! Vim pelo seu site e gostaria de conversar sobre um projeto.' | uri_escape }}" rel="noopener">WhatsApp <span>{{ site.whatsapp_display }}</span></a>
+      <a href="mailto:{{ site.email }}">E-mail <span>{{ site.email }}</span></a>
+      <a href="{{ site.instagram }}" rel="noopener">Instagram <span>@paulohlima</span></a>
+      <a href="{{ '/contato/' | relative_url }}">Pedir orçamento <span>conte sobre o projeto</span></a>
+    </nav>
+  </div>
+  <p class="rodape-copy">© {{ 'now' | date: "%Y" }} Paulo H Lima</p>
+</footer>

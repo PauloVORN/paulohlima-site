@@ -68,26 +68,47 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--cream);
-  text-shadow: 0 1px 12px rgba(0,0,0,.4);
-  opacity: .85;
+  text-shadow: 0 0 10px rgba(0,0,0,.55), 0 1px 3px rgba(0,0,0,.6);
+  opacity: 1;
+  position: relative;
   transition: opacity .25s, color .25s;
 }
-.coverlines a:hover { opacity: 1; color: var(--terracota); }
+/* área de toque de ~44px sem mexer no layout (o texto continua do mesmo tamanho) */
+.coverlines a::after {
+  content: '';
+  position: absolute;
+  inset: -1rem -.5rem;
+}
+.coverlines a:hover { color: var(--terracota); }
 
-.masthead--interior {
+/* Barra creme: páginas internas desde o início; na capa, depois que a foto termina (ver assets/js/site.js) */
+.masthead--interior,
+.masthead--solid {
   background: var(--cream);
   border-bottom: 1px solid var(--line);
   padding-bottom: 1.6rem;
+  pointer-events: auto;
 }
-.masthead--interior .masthead-name {
+.masthead { transition: background-color .25s, border-color .25s; }
+.masthead--interior .masthead-name,
+.masthead--solid .masthead-name {
   color: var(--ink);
   text-shadow: none;
 }
-.masthead--interior .coverlines a {
+.masthead--interior .coverlines a,
+.masthead--solid .coverlines a {
   color: var(--ink-soft);
   text-shadow: none;
 }
-.masthead--interior .coverlines a:hover { color: var(--terracota); }
+.masthead--interior .coverlines a:hover,
+.masthead--solid .coverlines a:hover { color: var(--terracota); }
+
+/* foco visível desenhado (teclado) */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--terracota);
+  outline-offset: 3px;
+}
+.capa a:focus-visible, .capa .coverlines a:focus-visible { outline-color: var(--cream); }
 
 /* ---------- Hero / Capa ---------- */
 .capa {
@@ -113,7 +134,7 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(20,14,8,.55) 0%, rgba(20,14,8,.05) 20%, rgba(20,14,8,.05) 55%, rgba(20,14,8,.65) 100%);
+    linear-gradient(to bottom, rgba(20,14,8,.62) 0%, rgba(20,14,8,.10) 22%, rgba(20,14,8,.05) 55%, rgba(20,14,8,.65) 100%);
 }
 .capa-content {
   position: relative;
@@ -123,11 +144,11 @@ a { color: inherit; text-decoration: none; }
 }
 .capa-eyebrow {
   font-family: var(--sans-cond);
-  font-size: .72rem;
+  font-size: .78rem;
   font-weight: 500;
   letter-spacing: .3em;
   text-transform: uppercase;
-  color: var(--terracota);
+  color: rgba(250,245,236,.94);
   text-shadow: 0 2px 14px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.6);
   margin-bottom: 1rem;
 }
@@ -327,4 +348,201 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 641px) {
   .coverlines { margin-top: .35rem; }
   .coverlines a { font-size: 1.8367rem; font-weight: 400; }
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 3.5rem 1.5rem 2rem;
+}
+.rodape-in {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.rodape-nome {
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.rodape-sub {
+  margin-top: .4rem;
+  font-family: var(--sans);
+  font-size: .95rem;
+  color: rgba(250,245,236,.72);
+}
+.rodape-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(11rem, auto));
+  gap: 1.4rem 3rem;
+}
+.rodape-links a {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  font-family: var(--sans-cond);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  min-height: 44px;
+  justify-content: center;
+  transition: color .25s;
+}
+.rodape-links a span {
+  font-family: var(--sans);
+  font-size: .95rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(250,245,236,.72);
+}
+.rodape-links a:hover { color: var(--terracota); }
+.rodape-copy {
+  max-width: 1200px;
+  margin: 2.5rem auto 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(250,245,236,.14);
+  font-family: var(--sans-cond);
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(250,245,236,.55);
+}
+
+/* ---------- Botão de WhatsApp ---------- */
+.wa-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  min-height: 48px;
+  padding: 0 1.1rem 0 .95rem;
+  background: var(--terracota);
+  color: var(--cream);
+  font-family: var(--sans-cond);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 6px 24px rgba(36,30,23,.28);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .3s, transform .3s, background-color .25s;
+}
+.wa-fab--on { opacity: 1; transform: none; pointer-events: auto; }
+.wa-fab:hover { background: #a84326; }
+.wa-fab:focus-visible { outline-color: var(--ink); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .wa-fab, .masthead { transition: none; }
+}
+
+/* ---------- Contato ---------- */
+.contato-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contato-lead {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+.contato-lista { list-style: none; display: grid; gap: .2rem; }
+.contato-lista a {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .9rem 0;
+  min-height: 44px;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  color: var(--ink);
+  transition: color .25s;
+}
+.contato-lista li:last-child a { border-bottom: 1px solid var(--line); }
+.contato-lista a:hover { color: var(--terracota); }
+.contato-rot {
+  font-family: var(--sans-cond);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.briefing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 1.6rem;
+}
+.campo { display: flex; flex-direction: column; gap: .4rem; }
+.campo--cheio, .briefing-acoes, .briefing-nota { grid-column: 1 / -1; }
+.campo label {
+  font-family: var(--sans-cond);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.campo input, .campo select, .campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: .7rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(36,30,23,.3);
+  border-radius: 0;
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--ink);
+}
+.campo textarea { resize: vertical; min-height: 6rem; }
+.campo input::placeholder, .campo textarea::placeholder { color: rgba(107,94,78,.7); }
+.campo input:focus, .campo select:focus, .campo textarea:focus { outline: none; border-bottom-color: var(--terracota); }
+.briefing-acoes { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: .4rem; }
+.btn-wa, .btn-mail {
+  min-height: 52px;
+  padding: 0 1.8rem;
+  font-family: var(--sans-cond);
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .25s, color .25s, border-color .25s;
+}
+.btn-wa { background: var(--terracota); color: var(--cream); border: 1px solid var(--terracota); }
+.btn-wa:hover { background: #a84326; border-color: #a84326; }
+.btn-mail { background: transparent; color: var(--ink); border: 1px solid rgba(36,30,23,.35); }
+.btn-mail:hover { border-color: var(--terracota); color: var(--terracota); }
+.briefing-nota { font-family: var(--sans); font-size: .9rem; color: var(--ink-soft); }
+
+@media (max-width: 860px) {
+  .contato-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 640px) {
+  .rodape { padding: 2.8rem 1.2rem 5.5rem; }
+  .rodape-links { grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
+  .briefing { grid-template-columns: 1fr; }
 }
