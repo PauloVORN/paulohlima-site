@@ -677,3 +677,48 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .rodape-sobre:hover { color: var(--terracota); border-color: var(--terracota); }
 @media (max-width: 640px) { .sobre-resumo { padding: 3.2rem 1.2rem; } .sobre-bloco { padding: 1.8rem 0; } }
+
+/* ---------- Guia e história ---------- */
+.sobre-mais { color: var(--terracota); border-bottom: 1px solid currentColor; transition: opacity .25s; }
+.sobre-mais:hover { opacity: .7; }
+.sobre-voltar { color: var(--terracota); }
+.sobre-historia p { font-size: 1.15rem; line-height: 1.75; }
+.guia-lista { list-style: none; display: grid; gap: .7rem; margin: 1rem 0; padding: 0; }
+.guia-lista li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-family: var(--sans);
+  font-size: 1.08rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.guia-lista li::before { content: ''; position: absolute; left: 0; top: .72em; width: .6rem; height: 1px; background: var(--terracota); }
+.guia-lista b { font-weight: 500; }
+.guia-passos { counter-reset: passo; }
+.guia-passos li { counter-increment: passo; padding-left: 2.2rem; }
+.guia-passos li::before {
+  content: counter(passo, decimal-leading-zero);
+  top: .15em; width: auto; height: auto; background: none;
+  font-family: var(--sans-cond); font-size: .8rem; font-weight: 500; letter-spacing: .1em; color: var(--terracota);
+}
+.guia-faq { border-top: 1px solid var(--line); }
+.guia-faq:last-child { border-bottom: 1px solid var(--line); }
+.guia-faq summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .6rem 0;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+.guia-faq summary::-webkit-details-marker { display: none; }
+.guia-faq summary::after { content: '+'; font-family: var(--sans); font-size: 1.4rem; color: var(--terracota); }
+.guia-faq[open] summary::after { content: '–'; }
+.guia-faq p { padding: 0 0 1.2rem; }
+.rodape-id .rodape-sobre { display: flex; width: fit-content; }
