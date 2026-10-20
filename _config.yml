@@ -25,6 +25,7 @@ instagram: "https://instagram.com/paulohlimaoficial"
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 defaults:
   - scope:

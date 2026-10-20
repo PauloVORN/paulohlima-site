@@ -1,0 +1,90 @@
+[
+ {
+  "slug": "zinzane-fashion-film",
+  "titulo": "Fashion Film",
+  "marca": "Zinzane",
+  "estacao": "",
+  "w": 1920,
+  "h": 1080,
+  "dur": 69,
+  "mb": 22.9,
+  "vertical": false
+ },
+ {
+  "slug": "atlantica-alma-colorida",
+  "titulo": "Alma Colorida",
+  "marca": "Toalhas Atlântica",
+  "estacao": "Verão 2025",
+  "w": 1080,
+  "h": 1920,
+  "dur": 60,
+  "mb": 22.2,
+  "vertical": true
+ },
+ {
+  "slug": "oh-beach-verao-2025",
+  "titulo": "Oh Beach",
+  "marca": "Oh Beach",
+  "estacao": "Verão 2025",
+  "w": 1080,
+  "h": 1920,
+  "dur": 60,
+  "mb": 25.5,
+  "vertical": true
+ },
+ {
+  "slug": "zinzane-travellers-floresta",
+  "titulo": "Travellers · Floresta",
+  "marca": "Zinzane",
+  "estacao": "Inverno 2023",
+  "w": 1080,
+  "h": 1920,
+  "dur": 30,
+  "mb": 16.9,
+  "vertical": true
+ },
+ {
+  "slug": "zinzane-travellers-metro",
+  "titulo": "Travellers · Metrô",
+  "marca": "Zinzane",
+  "estacao": "Inverno 2023",
+  "w": 1080,
+  "h": 1920,
+  "dur": 26,
+  "mb": 14.3,
+  "vertical": true
+ },
+ {
+  "slug": "mloures-abraco",
+  "titulo": "Abraço",
+  "marca": "MLoures",
+  "estacao": "",
+  "w": 1080,
+  "h": 1920,
+  "dur": 30,
+  "mb": 8.5,
+  "vertical": true
+ },
+ {
+  "slug": "zinzane-reels-04",
+  "titulo": "Reels 04",
+  "marca": "Zinzane",
+  "estacao": "",
+  "w": 1080,
+  "h": 1920,
+  "dur": 35,
+  "mb": 19.3,
+  "vertical": true
+ },
+ {
+  "slug": "zinzane-reels-07",
+  "titulo": "Reels 07",
+  "marca": "Zinzane",
+  "estacao": "",
+  "w": 1080,
+  "h": 1920,
+  "dur": 25,
+  "mb": 13.1,
+  "vertical": true
+ }
+]

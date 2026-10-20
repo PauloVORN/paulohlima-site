@@ -21,5 +21,7 @@
   {% include footer.html %}
   {% unless page.permalink == "/contato/" %}{% include whatsapp-fab.html %}{% endunless %}
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  {% if page.galeria %}<script src="{{ '/assets/js/galeria.js' | relative_url }}" defer></script>{% endif %}
+  {% if page.filmes %}<script src="{{ '/assets/js/filmes.js' | relative_url }}" defer></script>{% endif %}
 </body>
 </html>

@@ -1,0 +1,364 @@
+{
+ "campanha": [
+  {
+   "nome": "campanha-moda-rio-de-janeiro-arcos-da-lapa-toalha-amarela",
+   "alt": "Modelo com toalha amarela diante dos Arcos da Lapa, no Rio de Janeiro",
+   "w": 4055,
+   "h": 6082,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-praia-de-ipanema-toalha-laranja",
+   "alt": "Modelo sentada na praia de Ipanema com toalha laranja, com o Morro Dois Irmãos ao fundo",
+   "w": 6499,
+   "h": 4333,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-cristo-redentor-toalha-turquesa",
+   "alt": "Modelo de costas com toalha turquesa diante do Cristo Redentor",
+   "w": 4319,
+   "h": 6479,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-pao-de-acucar-maio-branco-toalha-azul",
+   "alt": "Modelo de maiô branco com toalha azul sobre uma pedra, com a Baía de Guanabara e o Pão de Açúcar ao fundo",
+   "w": 4245,
+   "h": 6368,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-vestido-verde-balaustrada-rio",
+   "alt": "Modelo de vestido verde diante de uma balaustrada, com barcos e a montanha ao fundo, no Rio de Janeiro",
+   "w": 1365,
+   "h": 2048,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1365
+   ],
+   "jpg": 1365
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-copacabana-palace-estampa-colorida",
+   "alt": "Modelo com saída de praia estampada diante do Copacabana Palace, em Copacabana",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-faixa-de-pedestres-copacabana-dupla",
+   "alt": "Duas modelos atravessam a faixa de pedestres na orla de Copacabana, com roupas lilás e estampadas",
+   "w": 3999,
+   "h": 5999,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-copacabana-palace-duas-modelos-preto",
+   "alt": "Duas modelos de roupas pretas diante do hotel Copacabana Palace",
+   "w": 8000,
+   "h": 4411,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-copacabana-palace-regata-zebra",
+   "alt": "Modelo de regata zebrada e saia preta, com o Copacabana Palace e um ônibus ao fundo",
+   "w": 3212,
+   "h": 4818,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-lancha-copacabana-contraluz",
+   "alt": "Modelo de blusa branca sentada na proa de uma lancha, em contraluz, com Copacabana ao fundo",
+   "w": 1365,
+   "h": 2048,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1365
+   ],
+   "jpg": 1365
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-sofa-na-praia-vestido-branco",
+   "alt": "Modelo de vestido branco recostada em um sofá na areia da praia",
+   "w": 1365,
+   "h": 2048,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1365
+   ],
+   "jpg": 1365
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-calcadao-de-copacabana-camisetas-rosa",
+   "alt": "Três modelos de camiseta rosa caminham no calçadão de Copacabana",
+   "w": 6720,
+   "h": 4480,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-casa-de-pedra-conjunto-vermelho",
+   "alt": "Modelo de conjunto vermelho caminha diante de uma casa de pedra coberta de hera",
+   "w": 2048,
+   "h": 1366,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2048
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "campanha-moda-rio-de-janeiro-entardecer-jaqueta-jeans",
+   "alt": "Modelo de jaqueta jeans sentada em uma pedra ao entardecer, com o céu roxo ao fundo",
+   "w": 2048,
+   "h": 1365,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2048
+   ],
+   "jpg": 1600
+  }
+ ],
+ "lookbook": [
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-vestido-longo-branco",
+   "alt": "Modelo de vestido longo branco, em fundo claro de estúdio",
+   "w": 4190,
+   "h": 6285,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-vestido-amarelo-tecido-ao-vento",
+   "alt": "Modelo de vestido amarelo com tecido leve ao vento, em fundo branco",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-saia-cinza-rodada",
+   "alt": "Modelo de saia cinza rodada e blusa preta em movimento, em fundo branco de estúdio",
+   "w": 1365,
+   "h": 2048,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1365
+   ],
+   "jpg": 1365
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-conjunto-preto-sandalia-oncinha",
+   "alt": "Modelo de conjunto preto e sandália de oncinha, em pose agachada, em fundo branco de estúdio",
+   "w": 1365,
+   "h": 2048,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1365
+   ],
+   "jpg": 1365
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-conjunto-paete-quimono",
+   "alt": "Modelo de conjunto preto de paetê com quimono transparente, em fundo claro de estúdio",
+   "w": 1365,
+   "h": 2048,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1365
+   ],
+   "jpg": 1365
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-vestido-longo-marrom",
+   "alt": "Modelo de vestido longo marrom, em fundo cinza de estúdio",
+   "w": 3887,
+   "h": 5830,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-bolsa-verde-gola-alta-preta",
+   "alt": "Modelo de gola alta preta com bolsa verde de couro, em fundo bege",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-blazer-branco-moodboard",
+   "alt": "Modelo sentada no chão, de blazer branco e calça azul-marinho, com notebook e papéis de moodboard",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-duas-modelos-camisas",
+   "alt": "Retrato de duas modelos de camisas branca e preta, em fundo bege",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-sueter-branco-gola-alta",
+   "alt": "Retrato de modelo de suéter branco de gola alta, com sofá bege ao fundo",
+   "w": 4357,
+   "h": 6535,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-vestido-rosa-bordado",
+   "alt": "Modelo de vestido rosa bordado, em fundo rosa com luz circular",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  },
+  {
+   "nome": "lookbook-moda-estudio-rio-de-janeiro-poltrona-calca-listrada",
+   "alt": "Modelo sentada em poltrona de couro, de blazer preto e calça listrada, em fundo pêssego",
+   "w": 4480,
+   "h": 6720,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1600,
+    2400
+   ],
+   "jpg": 1600
+  }
+ ]
+}

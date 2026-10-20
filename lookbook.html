@@ -1,22 +1,17 @@
 ---
-title: Lookbook de Moda no Rio de Janeiro
-description: "Lookbooks de moda no Rio de Janeiro: peça a peça, com a paisagem real como fundo."
+title: Lookbook de Moda em Estúdio no Rio de Janeiro
+description: "Lookbooks de moda em estúdio no Rio de Janeiro: peça a peça, com luz e fundo pensados para catálogo, loja virtual e redes sociais."
 permalink: /lookbook/
+galeria: true
 ---
 
 {% include masthead.html mode="interior" %}
 
 <section class="edicao edicao--top">
   <div class="edicao-header">
-    <span class="edicao-num">03</span>
+    <span class="edicao-num">02</span>
     <h1 class="edicao-title">Lookbook</h1>
   </div>
-  <div class="edicao-grid">
-    <div class="edicao-tile">Foto em breve</div>
-    <div class="edicao-tile">Foto em breve</div>
-    <div class="edicao-tile">Foto em breve</div>
-    <div class="edicao-tile">Foto em breve</div>
-    <div class="edicao-tile">Foto em breve</div>
-    <div class="edicao-tile">Foto em breve</div>
-  </div>
+  <p class="edicao-intro">Peça a peça, com luz e fundo pensados para a coleção: catálogo, loja virtual e redes sociais.</p>
+  {% include galeria.html fotos=site.data.fotos.lookbook pasta="lookbook" %}
 </section>

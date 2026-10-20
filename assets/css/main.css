@@ -63,7 +63,7 @@ a { color: inherit; text-decoration: none; }
 }
 .coverlines a {
   font-family: var(--sans-cond);
-  font-size: .68rem;
+  font-size: .7463rem;
   font-weight: 500;
   letter-spacing: .18em;
   text-transform: uppercase;
@@ -347,7 +347,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 @media (min-width: 641px) {
   .coverlines { margin-top: .35rem; }
-  .coverlines a { font-size: 1.8367rem; font-weight: 400; }
+  .coverlines a { font-size: 2.0175rem; font-weight: 400; }
 }
 
 /* ---------- Rodapé ---------- */
@@ -722,3 +722,97 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .guia-faq[open] summary::after { content: '–'; }
 .guia-faq p { padding: 0 0 1.2rem; }
 .rodape-id .rodape-sobre { display: flex; width: fit-content; }
+
+/* ---------- Intro das páginas de portfólio ---------- */
+.edicao-intro {
+  max-width: 1200px;
+  margin: -1rem auto 2.4rem;
+  padding-right: clamp(0px, 28vw, 380px);
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+/* ---------- Galeria (respeita o formato de cada foto) ---------- */
+.galeria { max-width: 1200px; margin: 0 auto; columns: 3; column-gap: 1.5rem; }
+.galeria--colunas { display: flex; gap: 1.5rem; columns: auto; align-items: flex-start; }
+.galeria-col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+.galeria:not(.galeria--colunas) .galeria-item { break-inside: avoid; margin-bottom: 1.5rem; }
+.galeria-link { display: block; overflow: hidden; background: var(--paper); cursor: zoom-in; }
+.galeria-link img { width: 100%; height: auto; transition: transform .7s ease; }
+.galeria-link:hover img { transform: scale(1.02); }
+@media (max-width: 900px) {
+  .galeria { columns: 2; column-gap: .8rem; }
+  .galeria--colunas, .galeria-col { gap: .8rem; }
+}
+
+/* ---------- Visualizador de fotos ---------- */
+html.lb-aberto, html.pl-aberto { overflow: hidden; }
+.lb {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(18, 13, 9, .97);
+}
+.lb[hidden] { display: none; }
+.lb-fig { margin: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 3.4rem 4rem; }
+.lb-pic img { display: block; max-width: 100%; max-height: calc(100svh - 6.8rem); width: auto; height: auto; }
+.lb-fechar, .lb-nav {
+  position: absolute; z-index: 2; color: var(--cream); background: none; border: 0; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-family: var(--sans); line-height: 1;
+  opacity: .85; transition: opacity .2s;
+}
+.lb-fechar:hover, .lb-nav:hover { opacity: 1; }
+.lb-fechar { top: .5rem; right: .6rem; width: 52px; height: 52px; font-size: 2.4rem; }
+.lb-nav { top: 50%; transform: translateY(-50%); width: 56px; height: 72px; font-size: 3rem; }
+.lb-ant { left: .3rem; } .lb-prox { right: .3rem; }
+.lb-cont { position: absolute; bottom: .9rem; left: 0; right: 0; text-align: center; font-family: var(--sans-cond); font-size: .8rem; letter-spacing: .24em; color: rgba(250, 245, 236, .7); }
+.lb button:focus-visible { outline: 2px solid var(--cream); outline-offset: -2px; }
+@media (max-width: 700px) {
+  .lb-fig { padding: 3.6rem .4rem 2.8rem; }
+  .lb-pic img { max-height: calc(100svh - 6.4rem); }
+  .lb-nav { width: 44px; height: 64px; font-size: 2.4rem; opacity: .6; }
+}
+
+/* ---------- Fashion Film ---------- */
+.filmes {
+  list-style: none; max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.8rem 1.2rem; align-items: start;
+}
+.filme--largo { grid-column: 1 / -1; }
+.filme-btn { position: relative; display: block; width: 100%; padding: 0; border: 0; background: #1b1510; overflow: hidden; cursor: pointer; aspect-ratio: 9 / 16; }
+.filme--largo .filme-btn { aspect-ratio: 16 / 9; }
+.filme-btn img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.filme-btn:hover img { transform: scale(1.03); }
+.filme-play {
+  position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%;
+  background: rgba(250, 245, 236, .92); box-shadow: 0 4px 24px rgba(0, 0, 0, .3); transition: transform .25s, background-color .25s;
+}
+.filme-play::after { content: ''; position: absolute; left: 26px; top: 20px; border-style: solid; border-width: 12px 0 12px 19px; border-color: transparent transparent transparent var(--ink); }
+.filme-btn:hover .filme-play { transform: scale(1.08); background: #fff; }
+.filme-dur {
+  position: absolute; right: .6rem; bottom: .6rem; padding: .15rem .5rem; background: rgba(18, 13, 9, .72); color: var(--cream);
+  font-family: var(--sans-cond); font-size: .78rem; letter-spacing: .12em;
+}
+.filme-leg { display: flex; flex-direction: column; gap: .15rem; margin-top: .7rem; }
+.filme-leg b { font-family: var(--sans-cond); font-size: .78rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.filme-leg span { font-family: var(--serif); font-size: 1.25rem; line-height: 1.2; color: var(--ink); }
+@media (max-width: 900px) {
+  .filmes { grid-template-columns: repeat(2, 1fr); gap: 1.4rem .8rem; }
+  .filme-play { width: 52px; height: 52px; margin: -26px 0 0 -26px; }
+  .filme-play::after { left: 21px; top: 15px; border-width: 11px 0 11px 17px; }
+  .filme-leg span { font-size: 1.1rem; }
+}
+
+/* ---------- Player de vídeo ---------- */
+.pl { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(18, 13, 9, .97); }
+.pl[hidden] { display: none; }
+.pl video { display: block; max-width: 100vw; max-height: calc(100svh - 4.6rem); background: #000; outline: none; }
+.pl-tit { margin: .7rem 3.5rem 0; text-align: center; font-family: var(--sans-cond); font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(250, 245, 236, .75); }
+.pl-fechar { position: absolute; top: .5rem; right: .6rem; z-index: 2; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; line-height: 1; color: var(--cream); background: none; border: 0; cursor: pointer; }
+.pl button:focus-visible { outline: 2px solid var(--cream); outline-offset: -2px; }
+
+/* ---------- Miniaturas do índice (foto real) ---------- */
+.indice-thumb { overflow: hidden; border: 0; background: var(--paper); }
+.indice-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.indice-item:hover .indice-thumb img { transform: scale(1.05); }

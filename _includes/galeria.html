@@ -1,0 +1,25 @@
+{%- comment -%}
+  Galeria que respeita o formato de cada foto (vertical, horizontal ou quadrada): nada é cortado.
+  Uso: {% include galeria.html fotos=site.data.fotos.campanha pasta="campanha" %}
+  As variações de imagem são geradas por scripts/build-images.cjs.
+{%- endcomment -%}
+<div class="galeria" data-galeria role="list" aria-label="Fotografias">
+  {%- for f in include.fotos -%}
+  {%- assign base = '/assets/img/' | append: include.pasta | append: '/' | append: f.nome -%}
+  {%- capture avif -%}{% for w in f.larguras %}{{ base | append: '-' | append: w | append: '.avif' | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}{%- endcapture -%}
+  {%- capture webp -%}{% for w in f.larguras %}{{ base | append: '-' | append: w | append: '.webp' | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}{%- endcapture -%}
+  {%- assign jpg = base | append: '-' | append: f.jpg | append: '.jpg' | relative_url -%}
+  <div class="galeria-item" role="listitem" data-ar="{{ f.h }}/{{ f.w }}">
+    <a class="galeria-link" href="{{ jpg }}"
+       data-base="{{ base | relative_url }}" data-larguras="{% for w in f.larguras %}{{ w }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+       data-jpg="{{ f.jpg }}" data-w="{{ f.w }}" data-h="{{ f.h }}" data-alt="{{ f.alt | escape }}"
+       aria-label="Ampliar foto {{ forloop.index }} de {{ forloop.length }}: {{ f.alt | escape }}">
+      <picture>
+        <source type="image/avif" srcset="{{ avif }}" sizes="(max-width: 700px) 50vw, (max-width: 1240px) 33vw, 400px">
+        <source type="image/webp" srcset="{{ webp }}" sizes="(max-width: 700px) 50vw, (max-width: 1240px) 33vw, 400px">
+        <img src="{{ jpg }}" width="{{ f.w }}" height="{{ f.h }}" alt="{{ f.alt | escape }}" decoding="async" {% if forloop.index0 < 4 %}fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"{% else %}loading="lazy"{% endif %}>
+      </picture>
+    </a>
+  </div>
+  {%- endfor -%}
+</div>

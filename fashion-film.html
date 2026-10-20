@@ -1,15 +1,34 @@
 ---
 title: Fashion Film no Rio de Janeiro
-description: "Fashion film no Rio de Janeiro: movimento, som e a cidade em cena."
+description: "Fashion films verticais e horizontais para marcas de moda no Rio de Janeiro: movimento, som e a cidade em cena."
 permalink: /fashion-film/
+filmes: true
 ---
 
 {% include masthead.html mode="interior" %}
 
 <section class="edicao edicao--top">
   <div class="edicao-header">
-    <span class="edicao-num">04</span>
+    <span class="edicao-num">03</span>
     <h1 class="edicao-title">Fashion Film</h1>
   </div>
-  <p class="edicao-em-breve">Em construção — entra na próxima etapa.</p>
+  <p class="edicao-intro">Movimento, som e a cidade em cena. Filmes pensados para a tela do celular, e também para a tela grande.</p>
+
+  <ul class="filmes" data-filmes>
+    {%- for f in site.data.filmes -%}
+    <li class="filme {% unless f.vertical %}filme--largo{% endunless %}">
+      <button class="filme-btn" type="button"
+              data-src="{{ '/assets/video/' | append: f.slug | append: '.mp4' | relative_url }}"
+              data-poster="{{ '/assets/video/' | append: f.slug | append: '.webp' | relative_url }}"
+              data-w="{{ f.w }}" data-h="{{ f.h }}"
+              data-titulo="{{ f.marca | append: ' · ' | append: f.titulo | escape }}"
+              aria-label="Assistir: {{ f.marca | escape }}, {{ f.titulo | escape }}{% if f.estacao != '' %}, {{ f.estacao }}{% endif %}">
+        <img src="{{ '/assets/video/' | append: f.slug | append: '.webp' | relative_url }}" width="{% if f.vertical %}720{% else %}1280{% endif %}" height="{% if f.vertical %}1280{% else %}720{% endif %}" alt="Capa do fashion film {{ f.titulo | escape }}, {{ f.marca | escape }}" {% unless forloop.first %}loading="lazy" {% endunless %}decoding="async">
+        <span class="filme-play" aria-hidden="true"></span>
+        <span class="filme-dur">{{ f.dur | divided_by: 60 }}:{% assign s = f.dur | modulo: 60 %}{% if s < 10 %}0{% endif %}{{ s }}</span>
+      </button>
+      <p class="filme-leg"><b>{{ f.marca }}</b><span>{{ f.titulo }}{% if f.estacao != '' %} · {{ f.estacao }}{% endif %}</span></p>
+    </li>
+    {%- endfor -%}
+  </ul>
 </section>
