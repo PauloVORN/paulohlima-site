@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#FAF5EC">
   {% seo %}
-  {% if site.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  {% if site.noindex or page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   {% include jsonld.html %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">

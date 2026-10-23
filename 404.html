@@ -1,0 +1,40 @@
+---
+title: Página não encontrada
+description: "Esta página não existe mais ou mudou de endereço. Veja o portfólio de moda de Paulo H Lima."
+permalink: /404.html
+sitemap: false
+noindex: true
+---
+
+{% include masthead.html mode="interior" %}
+
+<script>
+/* URLs de outras épocas do site antigo (ou links externos que ficaram pelo caminho) vão para o destino mais próximo.
+   Só roda nesta página; o que não reconhecer continua aqui, com os atalhos abaixo. */
+(function () {
+  var p = location.pathname.toLowerCase().replace(/\/+$/, '');
+  var base = '{{ site.baseurl }}';
+  if (base && p.indexOf(base.toLowerCase()) === 0) p = p.slice(base.length);
+  var t = null;
+  if (/^\/blog/.test(p)) t = '/sobre/';
+  else if (/^\/fashion-film/.test(p)) t = '/fashion-film/';
+  else if (/^\/(fotografo-de-moda-rj|portfolio|album|gallery|galeria|shooting)/.test(p)) t = '/';
+  else if (/^\/(fotografo-de-moda|o-fotografo|quem-somos)/.test(p)) t = '/sobre/';
+  else if (/^\/(fale-conosco|contato)/.test(p)) t = '/contato/';
+  if (t) location.replace(base + t);
+})();
+</script>
+
+<section class="edicao edicao--top sobre">
+  <div class="sobre-in">
+    <p class="sobre-eyebrow">Erro 404</p>
+    <h1 class="sobre-titulo">Esta página mudou de lugar.</h1>
+    <p class="sobre-lead">O endereço que você abriu não existe mais ou foi trocado. O portfólio inteiro está aqui:</p>
+    <ul class="guia-lista">
+      <li><a class="sobre-mais" href="{{ '/campanha/' | relative_url }}">Campanha</a>: campanhas e editoriais de moda no Rio de Janeiro.</li>
+      <li><a class="sobre-mais" href="{{ '/lookbook/' | relative_url }}">Lookbook</a>: peça a peça, em estúdio.</li>
+      <li><a class="sobre-mais" href="{{ '/fashion-film/' | relative_url }}">Fashion Film</a>: movimento, som e a cidade em cena.</li>
+      <li><a class="sobre-mais" href="{{ '/contato/' | relative_url }}">Contato</a>: peça um orçamento.</li>
+    </ul>
+  </div>
+</section>

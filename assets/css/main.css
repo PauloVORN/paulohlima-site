@@ -833,3 +833,7 @@ html.lb-aberto, html.pl-aberto { overflow: hidden; }
 
 .filme-yt { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--sans-cond); font-size: .78rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--terracota); border-bottom: 1px solid transparent; }
 .filme-yt:hover { border-bottom-color: var(--terracota); }
+
+/* H1 da capa: palavra-chave visível ("Fotógrafo de moda · Rio de Janeiro") + manchete, com o mesmo desenho de antes */
+.capa-h1 { margin: 0; font: inherit; font-weight: inherit; }
+.capa-h1 .capa-eyebrow, .capa-h1 .capa-headline { display: block; }
