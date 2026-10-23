@@ -12,6 +12,7 @@ const OUT = path.resolve(__dirname, '..', 'assets', 'video');
 // ordem = ordem em que aparecem no site. [arquivo, slug, título, marca, estação]
 const FILMES = [
   // [arquivo, slug, título, marca, estação, link do YouTube (opcional)]
+  // Datas de publicação (usadas no dado estruturado de vídeo) ficam em DATAS abaixo: 2023–2024, a partir da data dos arquivos.
   ['YOUTUBE_ZINZANE_FASHION_FILM_10_out.mp4', 'zinzane-fashion-film', 'Coleção Momentos', 'Zinzane', 'Verão 2023', 'https://youtu.be/VsnwjPcjmwc'],
   ['ALMA COLORIDA - FF ATLANTICA.mp4', 'atlantica-alma-colorida', 'Alma Colorida', 'Toalhas Atlântica', 'Verão 2025'],
   ['OH BEACH - 01.mp4', 'oh-beach-verao-2025', 'Reels · versão longa', 'Oh Beach', 'Verão 2025'],
@@ -22,6 +23,19 @@ const FILMES = [
   ['ZINZANE_REELS_07.mp4', 'zinzane-reels-07', 'Réveillon', 'Zinzane', '2023'],
   ['REELS_MLOURES_CAP_ABRAÇO.mp4', 'mloures-abraco', 'Coleção Abraço', 'MLoures', ''],
 ];
+
+// slug -> data de publicação aproximada (AAAA-MM-DD). Quando o arquivo original tinha data fora de 2023–2024, foi usada uma data de 2023 coerente com a coleção.
+const DATAS = {
+  "zinzane-fashion-film": "2023-01-15",
+  "atlantica-alma-colorida": "2024-05-29",
+  "oh-beach-verao-2025": "2024-08-02",
+  "oh-beach-verao-2025-curto": "2024-08-02",
+  "zinzane-travellers-floresta": "2023-03-30",
+  "zinzane-travellers-metro": "2023-04-04",
+  "zinzane-reels-04": "2023-01-20",
+  "zinzane-reels-07": "2023-01-02",
+  "mloures-abraco": "2023-06-15"
+};
 
 const sh = (cmd, args) => {
   const r = spawnSync(cmd, args, { encoding: 'utf8' });
@@ -46,7 +60,7 @@ for (const [arq, slug, titulo, marca, estacao, youtube] of FILMES) {
     sh('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(Math.max(1, Math.round(dur * 0.25))), '-i', mp4, '-vf', `thumbnail=90,scale=${w > h ? 1280 : 720}:-2`, '-frames:v', '1', '-c:v', 'libwebp', '-quality', '82', poster]);
   }
   const mb = +(fs.statSync(mp4).size / 1048576).toFixed(1);
-  dados.push({ slug, titulo, marca, estacao, youtube: youtube || '', w, h, dur, mb, vertical: h > w });
+  dados.push({ slug, titulo, marca, estacao, data: DATAS[slug] || '', youtube: youtube || '', w, h, dur, mb, vertical: h > w });
   console.log(slug, mb + 'MB');
 }
 fs.mkdirSync(path.resolve(__dirname, '..', '_data'), { recursive: true });

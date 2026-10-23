@@ -55,3 +55,35 @@ redirect_from:
     {%- endfor -%}
   </ul>
 </section>
+
+{%- comment -%} Dado estruturado de vídeo (VideoObject) para cada filme: ajuda o Google a mostrar os filmes como vídeo. {%- endcomment -%}
+{%- assign base = site.url | append: site.baseurl -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {%- for f in site.data.filmes %}
+    {%- assign nome = f.marca | append: ' · ' | append: f.titulo -%}
+    {%- if f.estacao != '' %}{% assign nome = nome | append: ' · ' | append: f.estacao %}{% endif -%}
+    {%- assign desc = 'Fashion film ' | append: f.marca | append: ', ' | append: f.titulo -%}
+    {%- if f.estacao != '' %}{% assign desc = desc | append: ' (' | append: f.estacao | append: ')' %}{% endif -%}
+    {%- assign desc = desc | append: ', filmado no Rio de Janeiro por Paulo H Lima.' -%}
+    {%- assign minutos = f.dur | divided_by: 60 -%}
+    {%- assign segundos = f.dur | modulo: 60 %}
+    {
+      "@type": "VideoObject",
+      "name": {{ nome | jsonify }},
+      "description": {{ desc | jsonify }},
+      "thumbnailUrl": {{ base | append: '/assets/video/' | append: f.slug | append: '.webp' | jsonify }},
+      "uploadDate": {{ f.data | jsonify }},
+      "duration": "PT{{ minutos }}M{{ segundos }}S",
+      "contentUrl": {{ base | append: '/assets/video/' | append: f.slug | append: '.mp4' | jsonify }},
+      {%- if f.youtube != '' %}
+      "embedUrl": {{ f.youtube | replace: 'https://youtu.be/', 'https://www.youtube.com/embed/' | jsonify }},
+      {%- endif %}
+      "inLanguage": "pt-BR"
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
