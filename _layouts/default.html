@@ -7,6 +7,10 @@
   {% seo %}
   {% if site.noindex or page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   {% include jsonld.html %}
+  {% unless site.noindex %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L46Y6STNNR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-L46Y6STNNR');</script>
+  {% endunless %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

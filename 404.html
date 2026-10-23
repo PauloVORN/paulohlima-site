@@ -16,7 +16,7 @@ noindex: true
   var base = '{{ site.baseurl }}';
   if (base && p.indexOf(base.toLowerCase()) === 0) p = p.slice(base.length);
   var t = null;
-  if (/^\/blog/.test(p)) t = '/sobre/';
+  if (/^\/(blog|o-negocio-da-fotografia)/.test(p)) t = '/sobre/';
   else if (/^\/fashion-film/.test(p)) t = '/fashion-film/';
   else if (/^\/(fotografo-de-moda-rj|portfolio|album|gallery|galeria|shooting)/.test(p)) t = '/';
   else if (/^\/(fotografo-de-moda|o-fotografo|quem-somos)/.test(p)) t = '/sobre/';
