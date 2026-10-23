@@ -1,8 +1,33 @@
 {%- assign base = site.url | append: site.baseurl -%}
+{%- comment -%} Trilha de navegação: nome curto de cada página (a home e o 404 não levam trilha). {%- endcomment -%}
+{%- case page.url -%}
+  {%- when '/campanha/' -%}{%- assign crumb = 'Campanha' -%}
+  {%- when '/lookbook/' -%}{%- assign crumb = 'Lookbook' -%}
+  {%- when '/fashion-film/' -%}{%- assign crumb = 'Fashion Film' -%}
+  {%- when '/sobre/' -%}{%- assign crumb = 'Sobre' -%}
+  {%- when '/contato/' -%}{%- assign crumb = 'Contato' -%}
+  {%- when '/como-contratar-fotografo-de-moda/' -%}{%- assign crumb = 'Como contratar um fotógrafo de moda' -%}
+  {%- when '/sobre/flash-que-queimou/' -%}{%- assign crumb = 'O flash que queimou' -%}
+  {%- else -%}{%- assign crumb = '' -%}
+{%- endcase -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
+    {%- if crumb != '' %}
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": {{ base | append: '/' | jsonify }} },
+        {%- if page.url == '/sobre/flash-que-queimou/' %}
+        { "@type": "ListItem", "position": 2, "name": "Sobre", "item": {{ base | append: '/sobre/' | jsonify }} },
+        { "@type": "ListItem", "position": 3, "name": {{ crumb | jsonify }} }
+        {%- else %}
+        { "@type": "ListItem", "position": 2, "name": {{ crumb | jsonify }} }
+        {%- endif %}
+      ]
+    },
+    {%- endif %}
     {
       "@type": "Person",
       "@id": {{ base | append: '/#paulo' | jsonify }},
