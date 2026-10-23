@@ -360,5 +360,33 @@
    ],
    "jpg": 1600
   }
+ ],
+ "sobre": [
+  {
+   "nome": "paulo-h-lima-fotografo-de-moda-camera-estabilizador",
+   "alt": "Paulo H Lima, fotógrafo e videomaker de moda, com uma câmera montada em estabilizador, de camiseta preta e fone de ouvido",
+   "w": 1333,
+   "h": 2000,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1333
+   ],
+   "jpg": 1333
+  },
+  {
+   "nome": "paulo-h-lima-ensaio-casa-de-criadores-2004",
+   "alt": "Duas jovens em um banheiro de faculdade: uma sentada sobre o vaso, de camisa vermelha e short azul, e outra no chão, de regata rosa, segurando um livro",
+   "w": 1440,
+   "h": 1920,
+   "larguras": [
+    480,
+    800,
+    1200,
+    1440
+   ],
+   "jpg": 1440
+  }
  ]
 }

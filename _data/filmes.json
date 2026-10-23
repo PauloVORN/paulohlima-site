@@ -1,9 +1,10 @@
 [
  {
   "slug": "zinzane-fashion-film",
-  "titulo": "Fashion Film",
+  "titulo": "Coleção Momentos",
   "marca": "Zinzane",
-  "estacao": "",
+  "estacao": "Verão 2023",
+  "youtube": "https://youtu.be/VsnwjPcjmwc",
   "w": 1920,
   "h": 1080,
   "dur": 69,
@@ -15,6 +16,7 @@
   "titulo": "Alma Colorida",
   "marca": "Toalhas Atlântica",
   "estacao": "Verão 2025",
+  "youtube": "",
   "w": 1080,
   "h": 1920,
   "dur": 60,
@@ -23,9 +25,10 @@
  },
  {
   "slug": "oh-beach-verao-2025",
-  "titulo": "Oh Beach",
+  "titulo": "Reels · versão longa",
   "marca": "Oh Beach",
   "estacao": "Verão 2025",
+  "youtube": "",
   "w": 1080,
   "h": 1920,
   "dur": 60,
@@ -33,10 +36,23 @@
   "vertical": true
  },
  {
+  "slug": "oh-beach-verao-2025-curto",
+  "titulo": "Reels · versão curta",
+  "marca": "Oh Beach",
+  "estacao": "Verão 2025",
+  "youtube": "",
+  "w": 1080,
+  "h": 1920,
+  "dur": 37,
+  "mb": 19,
+  "vertical": true
+ },
+ {
   "slug": "zinzane-travellers-floresta",
   "titulo": "Travellers · Floresta",
   "marca": "Zinzane",
   "estacao": "Inverno 2023",
+  "youtube": "",
   "w": 1080,
   "h": 1920,
   "dur": 30,
@@ -48,6 +64,7 @@
   "titulo": "Travellers · Metrô",
   "marca": "Zinzane",
   "estacao": "Inverno 2023",
+  "youtube": "",
   "w": 1080,
   "h": 1920,
   "dur": 26,
@@ -55,21 +72,11 @@
   "vertical": true
  },
  {
-  "slug": "mloures-abraco",
-  "titulo": "Abraço",
-  "marca": "MLoures",
-  "estacao": "",
-  "w": 1080,
-  "h": 1920,
-  "dur": 30,
-  "mb": 8.5,
-  "vertical": true
- },
- {
   "slug": "zinzane-reels-04",
-  "titulo": "Reels 04",
+  "titulo": "Coleção Momentos",
   "marca": "Zinzane",
-  "estacao": "",
+  "estacao": "Verão 2023",
+  "youtube": "",
   "w": 1080,
   "h": 1920,
   "dur": 35,
@@ -78,13 +85,26 @@
  },
  {
   "slug": "zinzane-reels-07",
-  "titulo": "Reels 07",
+  "titulo": "Réveillon",
   "marca": "Zinzane",
-  "estacao": "",
+  "estacao": "2023",
+  "youtube": "",
   "w": 1080,
   "h": 1920,
   "dur": 25,
   "mb": 13.1,
+  "vertical": true
+ },
+ {
+  "slug": "mloures-abraco",
+  "titulo": "Coleção Abraço",
+  "marca": "MLoures",
+  "estacao": "",
+  "youtube": "",
+  "w": 1080,
+  "h": 1920,
+  "dur": 30,
+  "mb": 8.5,
   "vertical": true
  }
 ]

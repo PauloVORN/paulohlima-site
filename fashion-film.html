@@ -28,6 +28,7 @@ filmes: true
         <span class="filme-dur">{{ f.dur | divided_by: 60 }}:{% assign s = f.dur | modulo: 60 %}{% if s < 10 %}0{% endif %}{{ s }}</span>
       </button>
       <p class="filme-leg"><b>{{ f.marca }}</b><span>{{ f.titulo }}{% if f.estacao != '' %} · {{ f.estacao }}{% endif %}</span></p>
+      {% if f.youtube != '' %}<a class="filme-yt" href="{{ f.youtube }}" target="_blank" rel="noopener">Ver também no YouTube</a>{% endif %}
     </li>
     {%- endfor -%}
   </ul>

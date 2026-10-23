@@ -1,0 +1,14 @@
+{%- comment -%}
+  Uma foto com AVIF/WebP/JPG, sem corte (usa a proporção real).
+  Parâmetros: foto (item de _data/fotos.json), pasta, sizes e, opcional, loading="eager"
+  para a foto que aparece logo ao abrir a página.
+{%- endcomment -%}
+{%- assign f = include.foto -%}
+{%- assign base = '/assets/img/' | append: include.pasta | append: '/' | append: f.nome -%}
+{%- capture avif -%}{% for w in f.larguras %}{{ base | append: '-' | append: w | append: '.avif' | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}{%- endcapture -%}
+{%- capture webp -%}{% for w in f.larguras %}{{ base | append: '-' | append: w | append: '.webp' | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}{%- endcapture -%}
+<picture>
+  <source type="image/avif" srcset="{{ avif }}" sizes="{{ include.sizes }}">
+  <source type="image/webp" srcset="{{ webp }}" sizes="{{ include.sizes }}">
+  <img src="{{ base | append: '-' | append: f.jpg | append: '.jpg' | relative_url }}" width="{{ f.w }}" height="{{ f.h }}" alt="{{ f.alt | escape }}" decoding="async" {% if include.loading == 'eager' %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+</picture>

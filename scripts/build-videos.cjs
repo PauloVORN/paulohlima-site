@@ -11,14 +11,16 @@ const OUT = path.resolve(__dirname, '..', 'assets', 'video');
 
 // ordem = ordem em que aparecem no site. [arquivo, slug, título, marca, estação]
 const FILMES = [
-  ['YOUTUBE_ZINZANE_FASHION_FILM_10_out.mp4', 'zinzane-fashion-film', 'Fashion Film', 'Zinzane', ''],
+  // [arquivo, slug, título, marca, estação, link do YouTube (opcional)]
+  ['YOUTUBE_ZINZANE_FASHION_FILM_10_out.mp4', 'zinzane-fashion-film', 'Coleção Momentos', 'Zinzane', 'Verão 2023', 'https://youtu.be/VsnwjPcjmwc'],
   ['ALMA COLORIDA - FF ATLANTICA.mp4', 'atlantica-alma-colorida', 'Alma Colorida', 'Toalhas Atlântica', 'Verão 2025'],
-  ['OH BEACH - 01.mp4', 'oh-beach-verao-2025', 'Oh Beach', 'Oh Beach', 'Verão 2025'],
+  ['OH BEACH - 01.mp4', 'oh-beach-verao-2025', 'Reels · versão longa', 'Oh Beach', 'Verão 2025'],
+  ['OH BEACH - 01 (1).mp4', 'oh-beach-verao-2025-curto', 'Reels · versão curta', 'Oh Beach', 'Verão 2025'],
   ['VERTICAL - FLORESTRA  - 05 v2.mp4', 'zinzane-travellers-floresta', 'Travellers · Floresta', 'Zinzane', 'Inverno 2023'],
   ['VERTICAL - METRÔ - 20.mp4', 'zinzane-travellers-metro', 'Travellers · Metrô', 'Zinzane', 'Inverno 2023'],
-  ['REELS_MLOURES_CAP_ABRAÇO.mp4', 'mloures-abraco', 'Abraço', 'MLoures', ''],
-  ['REELS_ZINZANE_04.mp4', 'zinzane-reels-04', 'Reels 04', 'Zinzane', ''],
-  ['ZINZANE_REELS_07.mp4', 'zinzane-reels-07', 'Reels 07', 'Zinzane', ''],
+  ['REELS_ZINZANE_04.mp4', 'zinzane-reels-04', 'Coleção Momentos', 'Zinzane', 'Verão 2023'],
+  ['ZINZANE_REELS_07.mp4', 'zinzane-reels-07', 'Réveillon', 'Zinzane', '2023'],
+  ['REELS_MLOURES_CAP_ABRAÇO.mp4', 'mloures-abraco', 'Coleção Abraço', 'MLoures', ''],
 ];
 
 const sh = (cmd, args) => {
@@ -28,7 +30,7 @@ const sh = (cmd, args) => {
 };
 fs.mkdirSync(OUT, { recursive: true });
 const dados = [];
-for (const [arq, slug, titulo, marca, estacao] of FILMES) {
+for (const [arq, slug, titulo, marca, estacao, youtube] of FILMES) {
   const src = path.join(BASE, arq);
   if (!fs.existsSync(src)) throw new Error('não achei: ' + src);
   const info = JSON.parse(sh('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height:format=duration', '-of', 'json', src]));
@@ -44,7 +46,7 @@ for (const [arq, slug, titulo, marca, estacao] of FILMES) {
     sh('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(Math.max(1, Math.round(dur * 0.25))), '-i', mp4, '-vf', `thumbnail=90,scale=${w > h ? 1280 : 720}:-2`, '-frames:v', '1', '-c:v', 'libwebp', '-quality', '82', poster]);
   }
   const mb = +(fs.statSync(mp4).size / 1048576).toFixed(1);
-  dados.push({ slug, titulo, marca, estacao, w, h, dur, mb, vertical: h > w });
+  dados.push({ slug, titulo, marca, estacao, youtube: youtube || '', w, h, dur, mb, vertical: h > w });
   console.log(slug, mb + 'MB');
 }
 fs.mkdirSync(path.resolve(__dirname, '..', '_data'), { recursive: true });

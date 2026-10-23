@@ -43,7 +43,11 @@ const FOTOS = {
     ['lookbook/selsção/STH030823-523.jpg', 'poltrona-calca-listrada', 'Modelo sentada em poltrona de couro, de blazer preto e calça listrada, em fundo pêssego'],
   ],
 };
-const PREFIXO = { campanha: 'campanha-moda-rio-de-janeiro', lookbook: 'lookbook-moda-estudio-rio-de-janeiro' };
+FOTOS.sobre = [
+  ['sobre/paulo-h-lima-retrato.jpg', 'fotografo-de-moda-camera-estabilizador', 'Paulo H Lima, fotógrafo e videomaker de moda, com uma câmera montada em estabilizador, de camiseta preta e fone de ouvido'],
+  ['sobre/foto-premiada-2004.jpg', 'ensaio-casa-de-criadores-2004', 'Duas jovens em um banheiro de faculdade: uma sentada sobre o vaso, de camisa vermelha e short azul, e outra no chão, de regata rosa, segurando um livro'],
+];
+const PREFIXO = { campanha: 'campanha-moda-rio-de-janeiro', lookbook: 'lookbook-moda-estudio-rio-de-janeiro', sobre: 'paulo-h-lima' };
 
 const run = (args) => {
   const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', ...args], { encoding: 'utf8' });

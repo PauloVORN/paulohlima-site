@@ -7,54 +7,64 @@ permalink: /sobre/
 {% include masthead.html mode="interior" %}
 
 <section class="edicao edicao--top sobre">
-  <div class="sobre-in">
-    <p class="sobre-eyebrow">Sobre</p>
-    <h1 class="sobre-titulo">Fotografando moda desde 2001.</h1>
-    <p class="sobre-lead">Comecei com uma câmera analógica depois de um desfile em Niterói. Hoje faço editoriais, campanhas, lookbooks e fashion films para marcas de moda, com o Rio de Janeiro como parte da imagem.</p>
+  <div class="sobre-in sobre-in--foto">
+    <figure class="sobre-foto sobre-foto--lado">
+      {% assign retrato = site.data.fotos.sobre[0] %}{% include foto.html foto=retrato pasta="sobre" sizes="(max-width: 860px) 86vw, 360px" loading="eager" %}
+    </figure>
 
-    <div class="sobre-bloco">
-      <h2>Como começou</h2>
-      <p>Em 2001 fui a um desfile em que minha namorada iria desfilar. A música, as luzes, a beleza das meninas, os flashes: saí dali sabendo o que queria viver mais vezes. Na segunda-feira seguinte entrei numa loja de fotografia no centro de Niterói e, na semana depois, estava num curso de 30 horas.</p>
-      <p>Durante cinco anos fotografei em todos os tempos livres. Em 2004 fotografei as produções das stylists Ana Lídia Borges e Marie Nepomuceno para o Casa de Criadores, em São Paulo, e fomos um dos dez finalistas. Meus trabalhos saíram em várias edições do caderno de moda do Jornal do Brasil. <a class="sobre-mais" href="{{ '/sobre/flash-que-queimou/' | relative_url }}">Leia a história do ensaio de 2004</a></p>
-    </div>
+    <div class="sobre-texto">
+      <p class="sobre-eyebrow">Sobre</p>
+      <h1 class="sobre-titulo">Fotografando moda desde 2001.</h1>
+      <p class="sobre-lead">Comecei com uma câmera analógica depois de um desfile em Niterói. Hoje faço editoriais, campanhas, lookbooks e fashion films para marcas de moda, com o Rio de Janeiro como parte da imagem.</p>
 
-    <div class="sobre-bloco">
-      <h2>O que a outra carreira me ensinou</h2>
-      <p>Sou administrador por formação. Trabalhei 15 anos com logística e eventos, e isso me deu o que não se aprende atrás da câmera: planejamento, prazo, escopo e foco. Em setembro de 2015 passei a viver só de fotografia e vídeo, e levei essa disciplina para dentro do set, sem perder a liberdade de criar.</p>
-    </div>
+      <figure class="sobre-foto sobre-foto--mobile">
+        {% assign retrato = site.data.fotos.sobre[0] %}{% include foto.html foto=retrato pasta="sobre" sizes="(max-width: 860px) 70vw, 360px" %}
+      </figure>
 
-    <div class="sobre-bloco">
-      <h2>Como trabalho</h2>
-      <ul class="sobre-pilares">
-        <li><b>A cidade entra na imagem.</b> Escolho locação, horário e luz antes do enquadramento. O Rio não é cenário: é parte da história da coleção.</li>
-        <li><b>Planejamento antes do clique.</b> Briefing, referências, lista de looks e cronograma combinados antes do dia. No set, sobra espaço para criar.</li>
-        <li><b>Foto e filme com a mesma direção.</b> Lookbook, campanha e fashion film saem da mesma visão, e não de equipes que nunca se falaram.</li>
-        <li><b>Prazo e escopo combinados e cumpridos.</b> O orçamento diz o que será entregue e quando.</li>
-      </ul>
-    </div>
+      <div class="sobre-bloco">
+        <h2>Como começou</h2>
+        <p>Em 2001 fui a um desfile em que minha namorada iria desfilar. A música, as luzes, a beleza das meninas, os flashes: saí dali sabendo o que queria viver mais vezes. Na segunda-feira seguinte entrei numa loja de fotografia no centro de Niterói e, na semana depois, estava num curso de 30 horas.</p>
+        <p>Durante cinco anos fotografei em todos os tempos livres. Em 2004 fotografei as produções das stylists Ana Lídia Borges e Marie Nepomuceno para o Casa de Criadores, em São Paulo, e fomos um dos dez finalistas. Meus trabalhos saíram em várias edições do caderno de moda do Jornal do Brasil. <a class="sobre-mais" href="{{ '/sobre/flash-que-queimou/' | relative_url }}">Leia a história do ensaio de 2004</a></p>
+      </div>
 
-    <div class="sobre-bloco">
-      <h2>Marcas com quem trabalhei</h2>
-      <p class="sobre-marcas">Zinzane <i>·</i> Toalhas Atlântica <i>·</i> Oh Beach <i>·</i> MLoures <i>·</i> Mar de Lótus <i>·</i> Ateliê OMG</p>
-    </div>
+      <div class="sobre-bloco">
+        <h2>O que a outra carreira me ensinou</h2>
+        <p>Sou administrador por formação. Trabalhei 15 anos com logística e eventos, e isso me deu o que não se aprende atrás da câmera: planejamento, prazo, escopo e foco. Em setembro de 2015 passei a viver só de fotografia e vídeo, e levei essa disciplina para dentro do set, sem perder a liberdade de criar.</p>
+      </div>
 
-    <div class="sobre-bloco">
-      <h2>O que dizem</h2>
-      <blockquote class="sobre-depo">
-        <p>“Trabalhar com alguém assim faz com que tudo flua melhor e faz com que o resultado seja simplesmente maravilhoso! Já estamos no sexto ensaio, de muitos que ainda virão.”</p>
-        <cite>Gisela e Camila, Mar de Lótus</cite>
-      </blockquote>
-      <blockquote class="sobre-depo">
-        <p>“Equipe linda e querida demais! Resultado além das expectativas e um dia super leve de trabalho. Obrigada pela recepção, pela entrega e pelo profissionalismo.”</p>
-        <cite>Ateliê OMG</cite>
-      </blockquote>
-    </div>
+      <div class="sobre-bloco">
+        <h2>Como trabalho</h2>
+        <ul class="sobre-pilares">
+          <li><b>A cidade entra na imagem.</b> Escolho locação, horário e luz antes do enquadramento. O Rio não é cenário: é parte da história da coleção.</li>
+          <li><b>Planejamento antes do clique.</b> Briefing, referências, lista de looks e cronograma combinados antes do dia. No set, sobra espaço para criar.</li>
+          <li><b>Foto e filme com a mesma direção.</b> Lookbook, campanha e fashion film saem da mesma visão, e não de equipes que nunca se falaram.</li>
+          <li><b>Prazo e escopo combinados e cumpridos.</b> O orçamento diz o que será entregue e quando.</li>
+        </ul>
+      </div>
 
-    <div class="sobre-cta">
-      <p class="sobre-cta-texto">Conte o que você tem em mente. Eu escuto a história da marca antes de pensar na imagem.</p>
-      <div class="sobre-cta-acoes">
-        <a class="btn-wa" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Olá, Paulo! Vim pelo seu site e gostaria de conversar sobre um projeto.' | uri_escape }}" rel="noopener">Falar no WhatsApp</a>
-        <a class="btn-mail" href="{{ '/contato/' | relative_url }}">Pedir orçamento</a>
+      <div class="sobre-bloco">
+        <h2>Marcas com quem trabalhei</h2>
+        <p class="sobre-marcas">Zinzane <i>·</i> Toalhas Atlântica <i>·</i> Oh Beach <i>·</i> MLoures <i>·</i> Mar de Lótus <i>·</i> Ateliê OMG</p>
+      </div>
+
+      <div class="sobre-bloco">
+        <h2>O que dizem</h2>
+        <blockquote class="sobre-depo">
+          <p>“Trabalhar com alguém assim faz com que tudo flua melhor e faz com que o resultado seja simplesmente maravilhoso! Já estamos no sexto ensaio, de muitos que ainda virão.”</p>
+          <cite>Gisela e Camila, Mar de Lótus</cite>
+        </blockquote>
+        <blockquote class="sobre-depo">
+          <p>“Equipe linda e querida demais! Resultado além das expectativas e um dia super leve de trabalho. Obrigada pela recepção, pela entrega e pelo profissionalismo.”</p>
+          <cite>Nathalia Ferras, fundadora do Ateliê OMG</cite>
+        </blockquote>
+      </div>
+
+      <div class="sobre-cta">
+        <p class="sobre-cta-texto">Conte o que você tem em mente. Eu escuto a história da marca antes de pensar na imagem.</p>
+        <div class="sobre-cta-acoes">
+          <a class="btn-wa" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Olá, Paulo! Vim pelo seu site e gostaria de conversar sobre um projeto.' | uri_escape }}" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn-mail" href="{{ '/contato/' | relative_url }}">Pedir orçamento</a>
+        </div>
       </div>
     </div>
   </div>
