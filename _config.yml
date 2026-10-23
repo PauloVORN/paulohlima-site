@@ -4,14 +4,9 @@ description: >-
   Fotografia de moda e publicidade, campanha, lookbook e fashion film no Rio de Janeiro.
   O Rio como coautor de cada imagem.
 
-# TEMPORÁRIO — URL de teste até a virada de DNS. Trocar pra
-# "https://paulohlima.com.br" / baseurl "" quando formos ao ar.
-url: "https://paulovorn.github.io"
-baseurl: "/paulohlima-site"
-
-# TEMPORÁRIO — enquanto o site está em endereço de teste, pede aos buscadores para não indexar.
-# Remover (ou colocar false) na virada para paulohlima.com.br.
-noindex: true
+# Endereço definitivo (domínio principal com www; o sem www redireciona via Cloudflare).
+url: "https://www.paulohlima.com.br"
+baseurl: ""
 
 lang: pt-BR
 timezone: America/Sao_Paulo
