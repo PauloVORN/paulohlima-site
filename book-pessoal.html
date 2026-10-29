@@ -1,0 +1,87 @@
+---
+title: Book pessoal de moda no Rio de Janeiro
+description: "Book pessoal e ensaio pessoal de moda no Rio de Janeiro, com Paulo H Lima: 25 fotos por R$ 1.500, para uma pessoa. Trabalhos de marca são orçados por projeto."
+permalink: /book-pessoal/
+---
+
+{% include masthead.html mode="interior" %}
+
+<section class="edicao edicao--top sobre guia">
+  <div class="sobre-in">
+    <p class="sobre-eyebrow">Trabalho pessoal</p>
+    <h1 class="sobre-titulo">Book pessoal de moda</h1>
+    <p class="sobre-lead">Um ensaio pessoal com olhar de fotógrafo de moda: 25 fotos para o seu portfólio, o seu perfil profissional, as suas redes e o seu uso pessoal.</p>
+
+    <div class="sobre-bloco">
+      <h2>Valor</h2>
+      <p><b>R$ 1.500 pelo book pessoal de moda: sessão individual, 25 fotos.</b> O valor é para uma pessoa.</p>
+    </div>
+
+    <div class="sobre-bloco">
+      <h2>O que é um book pessoal</h2>
+      <p>Book pessoal (ou ensaio pessoal) é um trabalho feito para você, pessoa física. É o caminho para quem quer boas fotos de si mesmo, com a direção de quem fotografa moda: para um portfólio, um perfil profissional, as redes sociais ou simplesmente para ter as imagens.</p>
+      <p>O local e a data são combinados com você.</p>
+    </div>
+
+    <div class="sobre-bloco">
+      <h2>O que este valor não inclui</h2>
+      <p>O valor acima vale somente para <b>book pessoal e ensaio pessoal</b>. Ele não se aplica a trabalhos de marca: <b>lookbook, campanha, publicidade e fashion film</b> são orçados por projeto, sem valor de tabela. Se você é uma marca, veja o <a href="{{ '/lookbook/' | relative_url }}">Lookbook</a> e a <a href="{{ '/campanha/' | relative_url }}">Campanha</a> e peça um orçamento pelo <a href="{{ '/contato/' | relative_url }}">Contato</a>.</p>
+    </div>
+
+    <div class="sobre-bloco">
+      <h2>Perguntas frequentes</h2>
+      <details class="guia-faq">
+        <summary>Quanto custa um book pessoal de moda?</summary>
+        <p>R$ 1.500, para uma pessoa, com 25 fotos.</p>
+      </details>
+      <details class="guia-faq">
+        <summary>Esse valor serve para uma marca ou para um lookbook?</summary>
+        <p>Não. O valor é só para book e ensaio pessoal. Trabalhos de marca (lookbook, campanha, publicidade, fashion film) são orçados por projeto.</p>
+      </details>
+      <details class="guia-faq">
+        <summary>E se forem mais pessoas?</summary>
+        <p>O valor é para uma pessoa. Para mais de uma, conte pelo WhatsApp quantas são e peça uma proposta.</p>
+      </details>
+    </div>
+
+    <div class="sobre-cta">
+      <p class="sobre-cta-texto">Para agendar o seu book pessoal, chame pelo WhatsApp e conte quando e onde você gostaria de fazer.</p>
+      <div class="sobre-cta-acoes">
+        <a class="btn-wa" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Olá, Paulo! Vim pelo seu site e gostaria de fazer um book pessoal.' | uri_escape }}" rel="noopener">Agendar pelo WhatsApp</a>
+        <a class="btn-mail" href="{{ '/contato/' | relative_url }}">Outras opções de contato</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Book pessoal de moda",
+      "serviceType": "Book pessoal / ensaio pessoal de moda",
+      "provider": { "@id": {{ site.url | append: site.baseurl | append: '/#paulo' | jsonify }} },
+      "areaServed": { "@type": "City", "name": "Rio de Janeiro" },
+      "description": "Book pessoal e ensaio pessoal de moda para uma pessoa, com 25 fotos. Válido somente para trabalho pessoal; lookbook, campanha, publicidade e fashion film são orçados por projeto.",
+      "offers": {
+        "@type": "Offer",
+        "name": "Book pessoal de moda (1 pessoa, 25 fotos)",
+        "priceCurrency": "BRL",
+        "price": 1500,
+        "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1, "unitText": "pessoa" }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        { "@type": "Question", "name": "Quanto custa um book pessoal de moda?", "acceptedAnswer": { "@type": "Answer", "text": "R$ 1.500, para uma pessoa, com 25 fotos." } },
+        { "@type": "Question", "name": "Esse valor serve para uma marca ou para um lookbook?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O valor é só para book e ensaio pessoal. Trabalhos de marca (lookbook, campanha, publicidade, fashion film) são orçados por projeto." } },
+        { "@type": "Question", "name": "E se forem mais pessoas?", "acceptedAnswer": { "@type": "Answer", "text": "O valor é para uma pessoa. Para mais de uma, conte pelo WhatsApp quantas são e peça uma proposta." } }
+      ]
+    }
+  ]
+}
+</script>
