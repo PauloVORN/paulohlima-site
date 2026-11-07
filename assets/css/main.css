@@ -841,3 +841,7 @@ html.lb-aberto, html.pl-aberto { overflow: hidden; }
 /* Sem arrastar nem menu de salvar ao segurar (iOS) em fotos e vídeos */
 img, video{ -webkit-user-drag:none; -webkit-touch-callout:none; }
 img{ user-select:none; -webkit-user-select:none; }
+
+/* Página de privacidade: respiro entre parágrafos e títulos */
+.privacidade .sobre-texto p { margin: 0 0 1rem; line-height: 1.65; }
+.privacidade .sobre-texto h2 { font-family: inherit; font-size: 1.15rem; font-weight: 500; margin: 1.8rem 0 .5rem; }
