@@ -10,7 +10,7 @@
   box.setAttribute('aria-modal', 'true');
   box.setAttribute('aria-label', 'Player de fashion film');
   box.hidden = true;
-  box.innerHTML = '<button class="pl-fechar" type="button" aria-label="Fechar">×</button><video controls playsinline preload="metadata"></video><p class="pl-tit"></p>';
+  box.innerHTML = '<button class="pl-fechar" type="button" aria-label="Fechar">×</button><video controls controlsList="nodownload noremoteplayback" disablePictureInPicture playsinline preload="metadata"></video><p class="pl-tit"></p>';
   document.body.appendChild(box);
 
   var video = box.querySelector('video'), tit = box.querySelector('.pl-tit'), abertoPor = null;

@@ -837,3 +837,7 @@ html.lb-aberto, html.pl-aberto { overflow: hidden; }
 /* H1 da capa: palavra-chave visível ("Fotógrafo de moda · Rio de Janeiro") + manchete, com o mesmo desenho de antes */
 .capa-h1 { margin: 0; font: inherit; font-weight: inherit; }
 .capa-h1 .capa-eyebrow, .capa-h1 .capa-headline { display: block; }
+
+/* Sem arrastar nem menu de salvar ao segurar (iOS) em fotos e vídeos */
+img, video{ -webkit-user-drag:none; -webkit-touch-callout:none; }
+img{ user-select:none; -webkit-user-select:none; }
